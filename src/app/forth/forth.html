@@ -1,0 +1,59 @@
+<div style="max-width: 1050px; margin: 0 auto;">
+  <div class="body">
+    <form class="quest">
+      <label class="list-name">問卷名稱：</label>
+
+      <input (keyup)="InputChange()" [(ngModel)]="inputData" name="test" class="f1" />
+      <br>
+
+    </form>
+  </div>
+
+</div>
+
+<div class="body2">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> 編號 </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="names">
+      <th mat-header-cell *matHeaderCellDef> 名稱 </th>
+      <td mat-cell *matCellDef="let element"> {{element.names}} </td>
+    </ng-container>
+
+    <!-- state Column -->
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef> 狀態 </th>
+      <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+    </ng-container>
+
+    <!-- start Column -->
+    <ng-container matColumnDef="start">
+      <th mat-header-cell *matHeaderCellDef> 開始時間 </th>
+      <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endTime">
+      <th mat-header-cell *matHeaderCellDef> 結束時間 </th>
+      <td mat-cell *matCellDef="let element"> {{element.endTime}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="result">
+      <th mat-header-cell *matHeaderCellDef> 填寫 </th>
+      <td mat-cell *matCellDef="let element"><a href="/fifth"> {{element.result}} </a></td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <button style="width: 110px;" class="btCss" routerLink="/ninth">前往管理頁</button>
+  <button style="width: 100px;" class="btCss" routerLink="/third">登出</button>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>

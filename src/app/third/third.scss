@@ -1,0 +1,95 @@
+/* 主色系 */
+$hatsune-green: #39C5BB;
+$hatsune-dark: #333333;
+$hatsune-pink: #FF6699;
+$hatsune-gray: #999999;
+$hatsune-white: #ffffff;
+
+.p1{
+  background-color: #f0f9f8; // 很淺的青綠
+  color: $hatsune-dark;
+  font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 20px auto; // 水平置中
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  height: 500px;
+  margin-top: 120px;
+}
+
+.p2{
+margin-top: 60px;
+}
+.Login{
+  color: $hatsune-green;
+  font-weight: bold;
+  // margin-top: 12px;
+  display: inline-block;
+  font-size: 50px;
+
+}
+.small-word{
+  color: $hatsune-green;
+  font-weight: bold;
+  margin-top: 12px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.bntCss{
+  background-color: $hatsune-green;
+  color: $hatsune-white;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 30px;
+  margin: 8px 4px 0 0;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+
+  &:hover {
+    background-color: $hatsune-pink;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.f1{
+  width: 50%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 2px solid $hatsune-green;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &:focus {
+    border-color: $hatsune-pink;
+    box-shadow: 0 0 5px rgba(255, 102, 153, 0.5);
+  }
+}
+.f2{
+  width: 50%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 2px solid $hatsune-green;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+
+  &:focus {
+    border-color: $hatsune-pink;
+    box-shadow: 0 0 5px rgba(255, 102, 153, 0.5);
+  }
+}

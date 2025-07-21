@@ -1,0 +1,23 @@
+/* 主色系 */
+$hatsune-green: #39C5BB;
+$hatsune-dark: #333333;
+$hatsune-pink: #FF6699;
+$hatsune-gray: #999999;
+$hatsune-white: #ffffff;
+
+/* 整體背景與文字設定 */
+.body {
+  background-color: #f0f9f8; // 很淺的青綠
+  color: $hatsune-dark;
+  font-family: 'Segoe UI', 'Noto Sans TC', sans-serif,;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 85%;
+  height: 80%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

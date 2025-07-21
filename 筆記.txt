@@ -1,0 +1,303 @@
+1.Content（內容）Padding（內距）Border（邊框）Margin（外距）
+2.Padding（內距）
+3.Margin（外距）
+4.padding-right
+  padding-top
+
+  padding(上右下左) 2px 3px 0px 0px
+
+5.px  vw(抓螢幕寬度比例) vh(抓螢幕高度比例) rem=16px %
+
+6.:hover{
+  width: 200px;
+}
+
+7.:active{
+  width: 200px;
+}
+8.由上往下
+9.display:flex
+10.display:flex
+11.藍色
+
+
+
+
+
+
+
+
+
+
+
+
+
+排版(Alt+Shifi+f)
+檔案放置位置 註解(ctrl + /) 盡量避免重複程式碼
+Alt+d  依序選取相同標籤
+打開資料夾 在上面列表位置輸入 cmd 輸入 ng s(erve) --o(pen)
+<h1 class="enter">登入</h1>
+<h2 class="account">帳號:</h2>
+<input type="text" class="f1">
+
+<h2 class="password">密碼:</h2>
+<input type="password" class="f2">
+
+
+<!-- <img src="巧克力.png" class="test1">
+<img src="巧克力.png" class="test2">
+<div class="div"></div>
+
+<div>
+<img src="浣熊.gif" class="gif">
+</div>
+
+<input type="text" class="input">
+<button class="button">button</button> -->
+
+
+<!-- <h1 class="enter">登入</h1>
+
+<div class="account">
+<label>帳號: </label>
+<input type="text" style="border-radius: 20px;">
+</div>
+
+<div class="password">
+<label>密碼: </label>
+<input type="password" style="border-radius: 20px;">
+</div>
+<button class="button">確定</button>
+
+<div>
+<img src="浣熊.gif" class="gif">
+</div> -->
+
+
+
+<div class="d-inline-flex p-2 bd-highlight">
+  <label class="fi1">Flex item 1</label>
+
+  <div class="align-self-end">
+    <label class="fi2">Flex item 2</label>
+  </div>
+
+  <div class="align-self-center">
+    <label class="fi3">Flex item 3</label>
+  </div>
+
+  <div class="align-self-baseline">
+    <label class="fi4">Flex item 4</label>
+  </div>
+
+  <label class="fi5">Flex item 5</label>
+
+</div>
+
+<!-- <div>
+</div> -->
+<br>
+
+<div class="d-inline-flex p-2 bd-highlight">
+  <label class="fi5">Flex item 5</label>
+
+  <div class="align-self-start">
+    <label class="fi4">Flex item 4</label>
+  </div>
+
+  <div class="align-self-center">
+    <label class="fi3">Flex item 3</label>
+  </div>
+
+  <div class="align-self-end">
+    <label class="fi2">Flex item 2</label>
+  </div>
+
+  <label class="fi1">Flex item 1</label>
+</div>
+
+
+
+  <!-- <label class="fi5">Flex item 5</label>
+
+<div>
+  <div class="fi3">Flex item 3</div>
+  <div class="fi3">Flex item 3</div>
+</div>
+  <div class="fi2">Flex item 2</div>
+  <div class="fi4">Flex item 4</div> -->
+
+
+  CSS
+
+  // .test1{
+//   width: 250px;
+//   height: 200px;
+//    padding:20px;
+//    margin-right: 50px;
+//   }
+// .test2{
+//       width: 150px;
+//       height: 200px;
+//       padding:20px;
+
+//   }
+// .div{
+//    border: 1px solid black;
+//    padding: 5px 4px;
+//    width: 500px;
+//    height: 100px;
+//    background-color: aqua;
+//    margin-top: 36px;
+//    margin-bottom: 36px;
+// }
+// .input{
+//   width: 380px;
+//   margin-right: 20px;
+// }
+// .button{
+//   width: 100px;
+// }
+
+// .gif{
+//   margin-left: 100px;
+//   margin-bottom: 50px;
+// }
+
+
+
+// .account{
+//   margin-bottom: 20px;
+// }
+// .button{
+//   text-align: center;
+//   width: 200px;
+//   border-radius: 20px;
+//   margin-top: 30px;
+//   color: cadetblue;
+// }
+
+// .gif{
+//   margin-top: 50px;
+// }
+
+
+
+.fi1{
+  text-align: center;
+  height: 80px;
+  background-color :blue;
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+
+.fi5{
+  text-align: center;
+  height: 80px;
+  background-color :yellow;
+  margin-bottom: 10px;
+}
+
+
+.fi2{
+  text-align: center;
+  margin-bottom: 10px;
+  background-color :greenyellow;
+}
+
+.fi4{
+  text-align: center;
+  margin-bottom: 10px;
+  background-color :green;
+}
+
+.fi3{
+  text-align: center;
+  margin-bottom: 10px;
+  background-color :red;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+<!-- <img src="巧克力.png" class="test1">
+<img src="巧克力.png" class="test2">
+<div class="div"></div>
+
+<div>
+<img src="浣熊.gif" class="gif">
+</div>
+
+<input type="text" class="input">
+<button class="button">button</button> -->
+
+
+<!-- <h1 class="enter">登入</h1>
+
+<div class="account">
+<label>帳號: </label>
+<input type="text" style="border-radius: 20px;">
+</div>
+
+<div class="password">
+<label>密碼: </label>
+<input type="password" style="border-radius: 20px;">
+</div>
+<button class="button">確定</button>
+
+<div>
+<img src="浣熊.gif" class="gif">
+</div> -->
+
+
+<!--
+<div class="d-inline-flex p-2 bd-highlight">
+  <label class="fi1">Flex item 1</label>
+
+  <div class="align-self-end">
+    <label class="fi2">Flex item 2</label>
+  </div>
+
+  <div class="align-self-center">
+    <label class="fi3">Flex item 3</label>
+  </div>
+
+  <div class="align-self-baseline">
+    <label class="fi4">Flex item 4</label>
+  </div>
+
+  <label class="fi5">Flex item 5</label>
+
+</div>
+
+<br>
+
+<div class="d-inline-flex p-2 bd-highlight">
+  <label class="fi5">Flex item 5</label>
+
+  <div class="align-self-start">
+    <label class="fi4">Flex item 4</label>
+  </div>
+
+  <div class="align-self-center">
+    <label class="fi3">Flex item 3</label>
+  </div>
+
+  <div class="align-self-end">
+    <label class="fi2">Flex item 2</label>
+  </div>
+
+  <label class="fi1">Flex item 1</label>
+</div> -->
+<!--
+<div class="background">
+
+  <div class="rebackground"></div>
+  <div class="rerebackground"></div>
+</div>
+
+<img src="mikuHello.jpg" class="picture"> -->
+
+<h1 class="ex1">{{ex1}}</h1>
+<h2 class="ex2">{{ex2}}</h2>
+<img src={{picture}} class="ex-picture">

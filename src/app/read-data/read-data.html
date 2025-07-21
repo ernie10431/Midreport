@@ -1,0 +1,53 @@
+<div class="body">
+  <h5 class="section">問卷時間： {{ data.sDate }} ~ {{ data.eDate }}</h5>
+  <h2 style="text-align: center;">{{ data.title }}</h2>
+
+  <div style="margin: 5% 0;">
+    <span>{{ data.explain }}</span>
+  </div>
+
+  <div><span style="color: red;">*</span><label>名稱：</label> {{ data.userName }}</div><br>
+  <div><span style="color: red;">*</span><label>手機：</label> {{ data.userPhone }}</div><br>
+  <div><label>信箱：</label> {{ data.userEmail }}</div><br>
+  <div><label>年齡：</label> {{ data.userAge }}</div><br>
+
+  <ol>
+    @for (quest of data.questArray; track $index) {
+      <li>
+        <h5>
+          {{ quest.questName }}
+          @if (quest.need) {
+            <span style="color: red;">*</span>
+          }
+        </h5>
+
+        @if (quest.type == 'M') {
+          <ol>
+            @for (option of quest.options; track $index) {
+              @if (option.boxBoolean) {
+                <li>{{ option.optionName }}</li>
+              }
+            }
+          </ol>
+        }
+
+        @if (quest.type == 'Q') {
+          @for (option of quest.options; track $index) {
+            @if (option.code == quest.radioAnswer) {
+              <p>{{ option.optionName }}</p>
+            }
+          }
+        }
+
+        @if (quest.type == 'T') {
+          <p>{{ quest.answer || '無' }}</p>
+        }
+      </li>
+    }
+  </ol>
+
+  <div style="text-align: right;">
+    <button (click)="returnList()" class="button">返回列表</button>
+  </div>
+</div>
+

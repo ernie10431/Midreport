@@ -1,0 +1,70 @@
+/* 主色系 */
+$hatsune-green: #39C5BB;
+$hatsune-dark: #333333;
+$hatsune-pink: #FF6699;
+$hatsune-gray: #999999;
+$hatsune-white: #ffffff;
+
+.body{
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #f0f9f8;
+font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+border-radius: 12px;
+font-size: 15px;
+
+}
+
+.body2{
+text-align: center;
+}
+
+.bodyBt{
+  text-align: right;
+}
+
+.question{
+  text-align: left;
+}
+
+.f1{
+  width: 50%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 2px solid $hatsune-green;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-left: 12px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &:focus {
+    border-color: $hatsune-pink;
+    box-shadow: 0 0 5px rgba(255, 102, 153, 0.5);
+  }
+}
+
+.bt{
+  background-color: $hatsune-green;
+  color: $hatsune-white;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  margin: 8px 4px 0 0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+
+  &:hover {
+    background-color: $hatsune-pink;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

@@ -1,0 +1,159 @@
+.quest-sit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.quest{
+margin-right: 800px;
+// margin-bottom: 300px;
+}
+
+.list-name{
+font-family: cursive;
+font-size: 30px;
+}
+
+.list-explain{
+font-family: cursive;
+}
+.list {
+  list-style: none;
+  width: 500px;
+}
+
+.f1{
+  padding: 0px 100px;
+}
+
+/* app.component.scss 或 styles.scss */
+.chat-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: #f0f9f8;
+  color: white;
+  padding: 12px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: #FF6699;
+    transform: scale(1.05);
+}
+
+}
+
+.iconButton{
+
+  background-color: #f0f9f8;
+    border-radius: 50%;
+    padding: 12px 14px;
+}
+
+.fab-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+
+  .chat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f0f9f8;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      background-color: #FF6699;
+      transform: scale(1.05);
+    }
+  }
+
+  .fab-options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    transition: 0.5s;
+
+    .fab-child {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #39C5BB;
+      color: white;
+      border: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #FF6699;
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  &.open .fab-options {
+    pointer-events: auto;
+    transition: 0.5s;
+
+    .child1 {
+      top: 95px;
+      left: 45px;
+      opacity: 1;
+      transform: scale(1);
+      transition: 0.3s;
+    }
+
+    .child2 {
+      top: 30px;
+      left: 100px;
+      opacity: 1;
+      transform: scale(1);
+      transition: 0.6s;
+    }
+
+    .child3 {
+      top: 15px;
+      left: 175px;
+      opacity: 1;
+      transform: scale(1);
+      transition: 0.9s;
+    }
+
+    .child4 {
+      top: 100px;
+      left: 120px;
+      opacity: 1;
+      transform: scale(1);
+      transition: 1.2s;
+    }
+
+    .child5 {
+      top: 170px;
+      left: 40px;
+      opacity: 1;
+      transform: scale(1);
+      transition: 1.5s;
+    }
+  }
+}
+
+

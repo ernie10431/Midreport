@@ -1,0 +1,26 @@
+<div >
+<div class="body">
+  <form class="quest">
+    <label class="list-name">問卷名稱</label>
+    <br>
+    <input [(ngModel)]="newQuestTeema" placeholder="請輸入問卷名稱(20字以內)" class="f1" name="text" />
+    <br>
+    <label class="list-name">問卷說明</label>
+    <br>
+    <textarea [(ngModel)]="newQuestExplain" placeholder="請輸入問卷說明" class="f1" name="text2"></textarea>
+    <br>
+    <label class="list-name">開始時間</label>
+    <br>
+    <input [(ngModel)]="newStartT" type="date" class="f1" name="startTime" />
+    <br>
+    <label class="list-name">結束時間</label>
+    <br>
+    <input [(ngModel)]="newEndT" type="date" class="f1" name="endTime" />
+    <br>
+    <div style="display: flex;justify-content: flex-end;">
+    <button class="button" routerLink="/ninth">取消</button>
+    <button (click)="TPData()" class="button">下一步</button>
+    </div>
+  </form>
+</div>
+</div>

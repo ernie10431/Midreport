@@ -1,0 +1,40 @@
+/* 主色系 */
+$hatsune-green: #39C5BB;
+$hatsune-dark: #333333;
+$hatsune-pink: #FF6699;
+$hatsune-gray: #999999;
+$hatsune-white: #ffffff;
+
+/* 整體背景與文字設定 */
+.body {
+  background-color: #f0f9f8; // 很淺的青綠
+  color: $hatsune-dark;
+  font-family: 'Segoe UI', 'Noto Sans TC', sans-serif,;
+  padding: 10px;
+  border-radius: 10px;
+  // width: 90%;
+  // margin: 20px auto; // 水平置中
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.button {
+  background-color: $hatsune-green;
+  color: $hatsune-white;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 20px;
+  margin: 8px 4px 0 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+
+  &:hover {
+    background-color: $hatsune-pink;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

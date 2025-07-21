@@ -1,0 +1,91 @@
+<div style="max-width: 1050px; margin: 0 auto;">
+  <div class="body">
+    <form class="quest">
+      <label class="list-name">名稱：</label>
+
+      <input (keyup)="InputChange()" [(ngModel)]="inputData" name="test" class="f1" />
+      <br>
+      <label class="list-name">狀態：</label>
+      <select style="width: 100px;" (change)="InputChange2()" name="test3" [(ngModel)]="inputData2" class="f1">
+        <option>進行中</option>
+        <option>已結束</option>
+        <option>尚未開始</option>
+        <option></option>
+      </select>
+      <!-- <input (keyup)="InputChange2()" [(ngModel)]="inputData2" name="test2" class="f1" /> -->
+      <br>
+      <label class="list-name">開始時間</label>
+
+      <input style="width: 200px;" (change)="onDateChange()" [(ngModel)]="inputDataS" class="d1" type="date"
+        name="startTime" class="f1" />
+      <label style="margin-left: 20px" class="list-name">結束時間</label>
+      <input style="width: 200px;margin-left: 20px" (change)="onDateChange()" [(ngModel)]="inputDataE" class="d1"
+        type="date" name="endTime" class="f1" />
+
+      <br>
+    </form>
+  </div>
+
+</div>
+
+<div class="body2">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- 選取 -->
+    <ng-container matColumnDef="choose">
+      <th mat-header-cell *matHeaderCellDef> <a style="cursor: pointer;margin-left: 0px;">
+          <img (click)="deleteSelected()" type="button" src="垃圾桶.svg">
+        </a></th>
+      <td mat-cell *matCellDef="let element">
+        <input type="checkbox" [(ngModel)]="element.checked" name="check{{element.position}}">
+      </td>
+    </ng-container>
+
+    <!-- 編號 -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> 編號 </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <!-- 名稱 -->
+    <ng-container matColumnDef="names">
+      <th mat-header-cell *matHeaderCellDef> 名稱 </th>
+      <td mat-cell *matCellDef="let element"> {{element.names}} </td>
+    </ng-container>
+
+    <!-- 狀態 -->
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef> 狀態 </th>
+      <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+    </ng-container>
+
+    <!-- 開始時間 -->
+    <ng-container matColumnDef="start">
+      <th mat-header-cell *matHeaderCellDef> 開始時間 </th>
+      <td mat-cell *matCellDef="let element"> {{element.start}} </td>
+    </ng-container>
+
+    <!-- 結束時間 -->
+    <ng-container matColumnDef="endTime">
+      <th mat-header-cell *matHeaderCellDef> 結束時間 </th>
+      <td mat-cell *matCellDef="let element"> {{element.endTime}} </td>
+    </ng-container>
+
+    <!-- 編輯 -->
+    <ng-container matColumnDef="result">
+      <th mat-header-cell *matHeaderCellDef> 結果 </th>
+      <td mat-cell *matCellDef="let element">
+        <a (click)="goCount(element)" style="cursor: pointer;text-decoration: underline;color: rgb(19, 6, 205);">{{element.result}}</a>
+      </td>
+
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <button style="width: 110px;" class="btCss" routerLink="/forth">前往使用頁</button>
+  <button style="width: 100px;" class="btCss" routerLink="/first">新增問卷</button>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>

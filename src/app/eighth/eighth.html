@@ -1,0 +1,26 @@
+<div class="body">
+  <p>標題水果水果水果</p>
+
+  <ol>
+    @for(data of chartArray;track $index){
+    <li>
+      <div style="width: 200px !important;">
+        <p>{{data.title}}</p>
+        <canvas id={{data.id}}></canvas>
+      </div>
+    </li>
+    }
+
+
+    <li>
+      <div>
+        <p>蔬菜蔬菜</p>
+        @for (vegetable of vegetableArray;track $index){
+        <p>{{vegetable}}</p>
+        }
+      </div>
+  </ol>
+  <div style="display: flex;justify-content: flex-end;">
+    <button style="width: 250px;" class="btCss" routerLink="/ninth">回列表頁</button>
+  </div>
+</div>
